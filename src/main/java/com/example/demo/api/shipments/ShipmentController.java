@@ -1,7 +1,6 @@
 package com.example.demo.api.shipments;
 
 import com.example.demo.api.Business.BusinessService;
-import com.example.demo.api.Courier.CourierService;
 import com.example.demo.api.Customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
