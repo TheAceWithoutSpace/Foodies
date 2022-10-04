@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface CourierService {
 
-     Optional<courier> getCourier(AppUser user);
+    Optional<courier> getCourier(AppUser user);
     List<courier> getAllCouriers();
 
     Optional<courier> getCourierById(Long courierId);

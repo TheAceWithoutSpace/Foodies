@@ -1,7 +1,5 @@
 package com.example.demo.api.user;
 
-import com.example.demo.api.Business.Business;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +10,7 @@ public interface UserService  {
     Optional<AppUser> getUser(String userName);
     boolean checkIfUserExists(String userName,String email,String phoneNumber);
     List<AppUser> getUsers();
-    List<AppUser>getUsersWhereUserRoleIsNull();
+    List<AppUser> getUsersWhereUserRoleIsNewUser();
     List<AppUser> getUsersWhereUserRoleIsBusiness();
     List<AppUser> getUsersWhereUserRoleIsUser();
     List<AppUser>getUsersWhereUserRoleIsCouriers();

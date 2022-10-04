@@ -19,14 +19,8 @@ public class CustomerServiceImp implements CustomerService {
     private final CustomerRepo customerRepo;
 
     @Override
-    public Optional<List<customers>> findMacthCustomeresByPhoneNumber(String phoneNumber) {
+    public Optional<List<customers>> findMathCustomersByPhoneNumber(String phoneNumber) {
         return customerRepo.findAllByPhoneNumber(phoneNumber);
-    }
-
-    @Override
-    public Optional<List<customers>> getCustomers(String name) {
-
-        return customerRepo.findByName(name);
     }
 
     @Override

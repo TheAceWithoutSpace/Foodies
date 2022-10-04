@@ -15,6 +15,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
 
+import static com.example.demo.api.user.Role.NewUser;
 import static javax.persistence.FetchType.EAGER;
 import static javax.persistence.GenerationType.SEQUENCE;
 
@@ -49,7 +50,7 @@ public class AppUser implements UserDetails {
     private Boolean locked =false;
     private Boolean enabled =false;
     @Enumerated(EnumType.STRING)
-    private Role roles;
+    private Role roles=NewUser;
 
     @OneToOne(fetch = EAGER)
     private Business business=null;
@@ -68,6 +69,7 @@ public class AppUser implements UserDetails {
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.notificationToken = notificationToken;
+        this.roles=NewUser;
     }
 
 

@@ -41,7 +41,7 @@ public class UserController {
 
     @GetMapping("/getAllUsersWithNoRole")
         public  ResponseEntity<List<AppUser>> getAllUsersWithNoRole(){
-        return ResponseEntity.ok().body(userService.getUsersWhereUserRoleIsNull());
+        return ResponseEntity.ok().body(userService.getUsersWhereUserRoleIsNewUser());
     }
     @GetMapping("/getAllUsersWithRoleBusiness")
     public  ResponseEntity<List<AppUser>> getAllUsersWithRoleBusiness(){

@@ -20,7 +20,7 @@ public class CustomerController {
    }
    @GetMapping("/customer")
     public Optional<List<customers>> getCustomerService(@RequestParam String phoneNumber) {
-        return customerService.findMacthCustomeresByPhoneNumber(phoneNumber) ;
+        return customerService.findMathCustomersByPhoneNumber(phoneNumber) ;
     }
 
     @PostMapping("/customers")

@@ -25,7 +25,7 @@ public class BusinessController {
     public ResponseEntity<Business> saveBusiness(@RequestBody Business Business) {
         return ResponseEntity.ok().body(businessService.saveBusiness(Business));
     }
-    @PostMapping("/businessByNumber")
+    @GetMapping("/businessByNumber")
     public ResponseEntity<Business> getUserByUserNumber(@RequestParam Long businessNumber){
         return ResponseEntity.ok().body(businessService.getBusinessById(businessNumber).get());
     }

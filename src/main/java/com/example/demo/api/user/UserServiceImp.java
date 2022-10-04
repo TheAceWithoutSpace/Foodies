@@ -141,9 +141,9 @@ public class UserServiceImp implements UserService, UserDetailsService {
     }
 
     @Override
-    public List<AppUser> getUsersWhereUserRoleIsNull() {
+    public List<AppUser> getUsersWhereUserRoleIsNewUser() {
 //        Role role=null;
-        return appUserRepo.findAllByRoles(null).orElseThrow();
+        return appUserRepo.findAllByRoles(Role.NewUser).orElseThrow();
     }
 
     @Override
