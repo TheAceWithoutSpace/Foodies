@@ -14,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 @Service
 @AllArgsConstructor
 @Slf4j
-        public class EmailService implements EmailSender{
+public class EmailService implements EmailSender{
     private final JavaMailSender mailSender;
     private final JwtConfig jwtConfig;
     @Override

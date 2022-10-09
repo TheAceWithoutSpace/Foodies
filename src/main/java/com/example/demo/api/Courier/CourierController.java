@@ -5,15 +5,11 @@ import com.example.demo.api.Business.BusinessService;
 import com.example.demo.api.user.AppUser;
 import com.example.demo.api.user.Role;
 import com.example.demo.api.user.UserService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -31,12 +27,10 @@ public class CourierController {
     }
     @GetMapping("/getCourier")
     public ResponseEntity<courier>getCourier(@RequestParam String userName){
-        System.out.println("Blop");
         return ResponseEntity.ok().body(courierService.getCourier(userService.getUser(userName).orElseThrow()).orElseThrow());
     }
     @PostMapping("/courier")
     public ResponseEntity<courier> saveCourier(@RequestParam String userName,@RequestParam String businessName) {
-        System.out.println(userName);
         AppUser user= userService.getUser(userName).orElseThrow();
         courier courier= new courier(user);
         userService.addRoleToUser(userName, Role.COURIER);
